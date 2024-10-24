@@ -1,6 +1,9 @@
-import Nav from "./header/navbar";
+import Nav from "./components/navbar";
 import { vazirmatn } from '@/app/fonts/fonts';
 import Image from "next/image";
+import Homecards from "./components/Homecards";
+import Bullet from "./components/bulletpoints";
+
 
 export default function Home() {
   return (
@@ -61,10 +64,9 @@ export default function Home() {
             <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
           </div>
 
-          <Slider/>
 
           <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
-            <div className="bg-transparent border-2 border-[#cfebfc] h-[413px] w-auto rounded-xl  " >
+            <div className="bg-transparent border-2 border-[#cfebfc] h-[413px] w-auto rounded-xl mt-24 " >
               <div className="flex justify-center items-center -mt-20  ">
                 <Image
                 className="bg-gradient-to-r from-indigo-900 to-red-800 px-1 rounded-full w-[33%] shadow-md "
@@ -128,7 +130,51 @@ export default function Home() {
 
 
         </div>
+        <div className="mt-10 bg-[#F5F5F5]" >
+          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
+            <h1 className="relative font-[700] md:text-[30px] text-default">مزایای تحصیل در ترکیه</h1>
+            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
+          </div>
+          <div className="grid grid-cols-4 gap-[150px] px-56 py-10">
+            <Homecards
+              src='/g135.svg'
+              title='اراسموس پلاس'
+              key='key'
+              />
 
+          </div>
+        </div>
+        <div>
+          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
+            <h1 className="relative font-[700] md:text-[30px] text-default">دانشگاه های ترکیه</h1>
+            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 px-[77px] gap-1 ">
+          <div className="overflow-hidden ">
+            <Image
+              className="w-[50vw] rounded-3xl "
+              src='/tr-uni1.svg'
+              alt="tr-uni 1"
+              width={400}
+              height={300}            
+            />
+          </div>
+          <div className="grid grid-rows-2 text-right" >
+            <div className="flex flex-col items-end mt-10">
+              <Bullet
+                title="دانشگاه های دولتی"
+                text="برای ورود به دانشگاه های دولتی باید در آزمون های tR yos یا Sat شرکت کرده و مدرک تافل .آیلتس یا تومر داشته باشید.در دانشگاه های دولتی بعضی از رشته ها ظرفیت محدود دارند و قبولی در آنها به نمره ی شما در آزمون .سن و معدل دبیرستان تان بستگی دارد."
+                key='key?'
+              />
+              <Bullet
+                title="دانشگاه های خصوصی"
+                text="برای ورود به دانشگاه های خصوصی ترکیه نیازی به آزمون ورودی نیست و شما می توانید با ارایه ی مدارک موردنیاز در رشته  مورد نظر تحصیل کنید ."
+              />
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   );
