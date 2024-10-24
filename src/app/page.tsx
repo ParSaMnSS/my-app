@@ -3,6 +3,7 @@ import { vazirmatn } from '@/app/fonts/fonts';
 import Image from "next/image";
 import Homecards from "./components/Homecards";
 import Bullet from "./components/bulletpoints";
+import Bulletsm from "./components/Bulletpointssm";
 
 
 export default function Home() {
@@ -144,35 +145,76 @@ export default function Home() {
 
           </div>
         </div>
-        <div>
-          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
-            <h1 className="relative font-[700] md:text-[30px] text-default">دانشگاه های ترکیه</h1>
-            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
+        <div className="bg-white" >
+          <div>
+            <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
+              <h1 className="relative font-[700] md:text-[30px] text-default">دانشگاه های ترکیه</h1>
+              <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
+            </div>
           </div>
-        </div>
-        <div className="grid grid-cols-2 px-[77px] gap-1 ">
-          <div className="overflow-hidden ">
-            <Image
-              className="w-[50vw] rounded-3xl "
-              src='/tr-uni1.svg'
-              alt="tr-uni 1"
-              width={400}
-              height={300}            
-            />
-          </div>
-          <div className="grid grid-rows-2 text-right" >
-            <div className="flex flex-col items-end mt-10">
-              <Bullet
-                title="دانشگاه های دولتی"
-                text="برای ورود به دانشگاه های دولتی باید در آزمون های tR yos یا Sat شرکت کرده و مدرک تافل .آیلتس یا تومر داشته باشید.در دانشگاه های دولتی بعضی از رشته ها ظرفیت محدود دارند و قبولی در آنها به نمره ی شما در آزمون .سن و معدل دبیرستان تان بستگی دارد."
-                key='key?'
-              />
-              <Bullet
-                title="دانشگاه های خصوصی"
-                text="برای ورود به دانشگاه های خصوصی ترکیه نیازی به آزمون ورودی نیست و شما می توانید با ارایه ی مدارک موردنیاز در رشته  مورد نظر تحصیل کنید ."
+          <div className="grid grid-cols-2 px-[77px] gap-1 ">
+            <div className="overflow-hidden  ">
+              <Image
+                className="w-[50vw]  "
+                src='/tr-uni1.svg'
+                alt="tr-uni 1"
+                width={400}
+                height={300}            
               />
             </div>
+            <div className="grid grid-rows-2 text-right" >
+              <div className="flex flex-col items-end mt-10">
+                <Bullet
+                  title="دانشگاه های دولتی"
+                  text="برای ورود به دانشگاه های دولتی باید در آزمون های tR yos یا Sat شرکت کرده و مدرک تافل .آیلتس یا تومر داشته باشید.در دانشگاه های دولتی بعضی از رشته ها ظرفیت محدود دارند و قبولی در آنها به نمره ی شما در آزمون .سن و معدل دبیرستان تان بستگی دارد."
+                  key='key?'
+                />
+                <Bullet
+                  title="دانشگاه های خصوصی"
+                  text="برای ورود به دانشگاه های خصوصی ترکیه نیازی به آزمون ورودی نیست و شما می توانید با ارایه ی مدارک موردنیاز در رشته  مورد نظر تحصیل کنید ."
+                />
+              </div>
+            </div>
+            <div className="w-[90vw] h-[429px] relative">
+              <Image
+                className="w-[90vw] h-auto absolute"
+                src='/sharayet.svg'
+                alt="ik"
+                width={1200}
+                height={400}
+              />
+              <Image
+                className="absolute w-[90vw] h-auto"
+                src='/sharayet2.svg'
+                alt="idk"
+                width={1200}
+                height={400}
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <h1 className="font-bold text-white text-[36px] ">شرایط تحصیل در ترکیه</h1>
+                <h2 className="font-bold text-white text-[24px] " >:در کشور ترکیه می توانید در چهار مقطع تحصیل کنید</h2>
+              </div>
+            </div>
 
+
+          </div>
+          <div className="grid grid-cols-4 px-14" >
+            <Bulletsm
+              title="کاردانی"
+              text="•این مقطع دو ساله است و سریع وارد بازار کار میشوید •شهریه مقطع کاردانی مناسب تر از دیگر مقاطع هست. •در اکثر دانشگاه ترکیه شما امکان تحصیل در مقطع کاردانی رو دارید. •اکنون یکی از مناسب ترین های دریافت اقامت ترکیه تحصیل در مقطع کاردانی هست."
+            />
+            <Bulletsm
+              title="کارشناسی"
+              text="•این مقطع 4 ساله است •در دانشگاه های دولتی نیاز به آزمون هایی مثل موارد زیر وجود داره: ۱. SAT ۲. TOMER ۳. TR YOS •در دانشگاه های خصوصی بدون آزمون میتونید دررشته دلخواه تون تحصیل کنید.  •در رشته های متنوع میتونید تحصیل کنید برای مثال: طراحی مد و فشن، مدیریت، فنی مهندسی، موسیقی •برخی از دانشگاه های ترکیه دیپلم آبی ارائه میدهند که مورد تایید اروپا و کانادا آمریکا هست"
+            />
+            <Bulletsm
+              title="کارشناسی ارشد"
+              text="•به دو زبان ترکی و انگلیسی دانشجو ها تحصیل میکنند. •بازه زمانی تحصیل بین یک الی دو سال است. •دوره ارشد به دو حالت کلی با تز و بدون تز ارایه میشوند. •در دانشگاه های دولتی علاوه بر مدارک گفته شده در قسمت بالا مدارکی مثل موارد زیرهم نیازهست ۱. ACT ۲. GRE ۳. GMSAT •امکان استفاده از اراسموس برای انتقالی به اروپا •این مقطع شامل بورسیه تحصیلی  میشود"
+            />
+            <Bulletsm
+              title="دکترا"
+              text="•این مقطع چهار ساله است •امکان تحصیل به زبان انگلیسی •در دانشگاه های دولتی ترکیه علاوه بر مدارک گفته شده در مقاطع لیسانس و فوق لیسانس عوامل زیر هم مهم است:  •معدل بالا در دوره کارشناسی ارشد •مدرک زبان با نمره ی بالا •نوشتن مقاله در ژورنال های معتبر •این مقطع شامل آزمون جامع هم میشود این مقطع هم شامل بورسیه تحصیلی میشود"
+            />
           </div>
         </div>
       </div>
