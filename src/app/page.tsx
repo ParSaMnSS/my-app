@@ -6,6 +6,9 @@ import Bullet from "./components/bulletpoints";
 import Bulletsm from "./components/Bulletpointssm";
 import Cards from "./components/cards";
 import Headers from "./components/headers";
+import { Link } from "lucide-react";
+import AccordionItem from "./components/AccordionItem";
+import FAQ from "./components/FAQ";
 
 
 export default function Home() {
@@ -62,10 +65,9 @@ export default function Home() {
                 height={500}
                 />
           </div>
-          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
-            <h1 className="relative font-[700] md:text-[30px] text-default">مشاوران شما در سوپرپی</h1>
-            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
-          </div>
+          <Headers
+            title="مشاوران شما در سوپرپی"
+          />
 
 
           <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
@@ -134,10 +136,9 @@ export default function Home() {
 
         </div>
         <div className="mt-10 bg-[#F5F5F5]" >
-          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
-            <h1 className="relative font-[700] md:text-[30px] text-default">مزایای تحصیل در ترکیه</h1>
-            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
-          </div>
+          <Headers
+            title="مزایای تحصیل در ترکیه"
+          />
           <div className="grid grid-cols-4 gap-[150px] px-56 py-10">
             <Homecards
               src='/g135.svg'
@@ -148,12 +149,9 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-white" >
-          <div>
-            <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
-              <h1 className="relative font-[700] md:text-[30px] text-default">دانشگاه های ترکیه</h1>
-              <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
-            </div>
-          </div>
+          <Headers
+            title="دانشگاه های ترکیه"
+          />
           <div className="grid grid-cols-2 px-[77px] gap-1 ">
             <div className="overflow-hidden  ">
               <Image
@@ -177,7 +175,8 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-[90vw] h-[429px] relative">
+            {/* this is the thingi */}
+            <div className="w-[90vw] h-[429px] relative"> 
               <Image
                 className="w-[90vw] h-auto absolute"
                 src='/sharayet.svg'
@@ -218,10 +217,9 @@ export default function Home() {
               text="•این مقطع چهار ساله است •امکان تحصیل به زبان انگلیسی •در دانشگاه های دولتی ترکیه علاوه بر مدارک گفته شده در مقاطع لیسانس و فوق لیسانس عوامل زیر هم مهم است:  •معدل بالا در دوره کارشناسی ارشد •مدرک زبان با نمره ی بالا •نوشتن مقاله در ژورنال های معتبر •این مقطع شامل آزمون جامع هم میشود این مقطع هم شامل بورسیه تحصیلی میشود"
             />
           </div>
-          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
-            <h1 className="relative font-[700] md:text-[30px] text-default">لیست دانشگاه ها</h1>
-            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
-          </div>
+          <Headers
+            title="لیست دانشگاه ها"
+          />
 
           <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
             <Cards
@@ -246,7 +244,72 @@ export default function Home() {
           <Headers
             title="بلاگ سوپر پی "
           />
+          <div className="grid grid-cols-2 mx-10 ">
+            <div className="relative inline-block w-[56vw] h-[649px] overflow-hidden rounded-2xl ">
+              <Image
+                className="w-full float-left object-cover h-[700px] "
+                src='/TFlag.png'
+                alt="ss"
+                width={500}
+                height={300}
+              />
+              <div className="absolute bg-[#1B1464] w-screen h-screen opacity-[56%]"/>
+              <div className="absolute bottom-0 left-0 p-5" > 
+                <button className="border border-white text-white px-4 py-2 font-bold text-default rounded-2xl " >جزییات بیشتر</button>
+              </div>
+              <div className="absolute bottom-0 right-0 w-[500px] ">
+                <h1 className="text-white font-bold text-[32px] px-10 py-10 text-right" > تحصیل در مقاطع تحصیلات تکمیلی در ترکیه </h1>
+              </div>
+            </div>
 
+            <div className="grid grid-rows-2 gap-4 " >
+              <div className="relative inline-block flex-1 overflow-hidden ">
+                <Image
+                  className="w-[36vw] h-[45vh] object-cover float-right rounded-2xl"
+                  src='/group.png'
+                  alt="as"
+                  width={400}
+                  height={200}                
+                />
+                <div className="absolute right-0 opacity-[56%] bg-[#1B1464] w-[36vw] h-[45vh] rounded-2xl" />
+                <div className="absolute bottom-5 left-40 p-5" > 
+                  <button className="border border-white text-white px-4 py-2 font-bold text-default rounded-2xl " >جزییات بیشتر</button>
+                </div>
+                <div className="absolute bottom-0 right-0 w-[20vw]">
+                  <h1 className="text-white font-bold text-[24px] text-right p-5" > برای ویزای دانشجویی اقدام کنید </h1>
+                </div>
+              </div>
+              <div className="relative inline-block flex-1 overflow-hidden ">
+                <Image
+                  className="w-[36vw] h-[45vh] object-cover float-right rounded-2xl"
+                  src='/walkingimage.png'
+                  alt="as"
+                  width={400}
+                  height={200}                
+                />
+                <div className="absolute right-0 opacity-[56%] bg-[#1B1464] w-[36vw] h-[45vh] rounded-2xl" />
+                <div className="absolute bottom-5 left-40 p-5" > 
+                  <button className="border border-white text-white px-4 py-2 font-bold text-default rounded-2xl " >جزییات بیشتر</button>
+                </div>
+                <div className="absolute bottom-0 right-0 w-[20vw]">
+                  <h1 className="text-white font-bold text-[24px] text-right p-5" > الزامات شرکت در آزمون ورودی </h1>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <Headers
+            title="سوالات متداول"
+          />
+
+          <div className="flex flex-col justify-center items-center px-10 mt-10" >
+            <div className="bg-[#F5F5F5]">
+                <FAQ/>
+              </div>
+
+          </div>
 
         </div>
       </div>
