@@ -4,6 +4,8 @@ import Image from "next/image";
 import Homecards from "./components/Homecards";
 import Bullet from "./components/bulletpoints";
 import Bulletsm from "./components/Bulletpointssm";
+import Cards from "./components/cards";
+import Headers from "./components/headers";
 
 
 export default function Home() {
@@ -216,6 +218,36 @@ export default function Home() {
               text="•این مقطع چهار ساله است •امکان تحصیل به زبان انگلیسی •در دانشگاه های دولتی ترکیه علاوه بر مدارک گفته شده در مقاطع لیسانس و فوق لیسانس عوامل زیر هم مهم است:  •معدل بالا در دوره کارشناسی ارشد •مدرک زبان با نمره ی بالا •نوشتن مقاله در ژورنال های معتبر •این مقطع شامل آزمون جامع هم میشود این مقطع هم شامل بورسیه تحصیلی میشود"
             />
           </div>
+          <div className="grid grid-rows-2 justify-center items-center md:mt-28 mt-10">
+            <h1 className="relative font-[700] md:text-[30px] text-default">لیست دانشگاه ها</h1>
+            <div className="bg-[#F7415F] w-[78px] h-[5px] mx-auto -mt-2 md:-mt-5"></div>
+          </div>
+
+          <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
+            <Cards
+              src="/uni-img.png"
+              alt="unimage"
+              title="دانشگاه مدیپول"
+              text="دانشگاه مدیپول استانبول قطعا شناخته شده ترین دانشگاه خصوصی در ترکیه برای تحصیل پزشکی در این کشور است.دلیل شهرت این دانشگاه وجود امکانات مدرن و متدهای آموزشی ویژه ای است که در دانشکده پزشکی این دانشگاه ارائه می شود. "            
+            />
+            <Cards
+              src="/uni-img.png"
+              alt="unimage"
+              title="دانشگاه آجی بادام"
+              text="دانشگاه آجی بادام ترکیه یکی از دانشگاه‌های خصوصی در کشور ترکیه محسوب می‌شود که در منطقه آسیایی  استانبول قرار دارد. در دانشگاه آجی بادام استانبول، دروس به زبان انگلیسی و ترکی تدریس می‌شود که این مورد تحصیل را برای دانشجویان خارجی آسان می‌سازد."
+            />
+            <Cards
+              src="/uni-img.png"
+              alt="unimage"
+              title="دانشگاه آیدین"
+              text="دانشگاه آیدین، دانشگاهی خصوصی در شهر استانبول ترکیه است که در سال ۲۰۰۷ تأسیس شد. این دانشگاه یکی از بزرگترین دانشگاه‌های خصوصی ترکیه است و بیش از ۴۰ هزار دانشجو دارد و یکی از بهترین انتخاب‌ها برای تحصیل در ترکیه است"
+            />
+          </div>
+          <Headers
+            title="بلاگ سوپر پی "
+          />
+
+
         </div>
       </div>
     </div>
