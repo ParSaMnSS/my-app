@@ -6,10 +6,9 @@ import Bullet from "./components/bulletpoints";
 import Bulletsm from "./components/Bulletpointssm";
 import Cards from "./components/cards";
 import Headers from "./components/headers";
-import { Link } from "lucide-react";
-import AccordionItem from "./components/AccordionItem";
 import FAQ from "./components/FAQ";
-
+import ContactForm from "./components/informationForm";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -68,6 +67,7 @@ export default function Home() {
           <Headers
             title="مشاوران شما در سوپرپی"
           />
+
 
 
           <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
@@ -145,6 +145,8 @@ export default function Home() {
               title='اراسموس پلاس'
               key='key'
               />
+      
+            
 
           </div>
         </div>
@@ -305,11 +307,25 @@ export default function Home() {
           />
 
           <div className="flex flex-col justify-center items-center px-10 mt-10" >
-            <div className="bg-[#F5F5F5]">
-                <FAQ/>
-              </div>
+              <FAQ/>
+          </div>
+
+          <div className="grid grid-cols-2 mt-20 bg-[#F5F5F5] mx-20 rounded-2xl mb-10" >
+            <Image
+              className="rounded-l-2xl h-[]"
+              src='/call.png'
+              alt="ff"
+              width={1000}
+              height={800}
+            />
+            <ContactForm
+            />
+
+
 
           </div>
+
+          <Footer/>
 
         </div>
       </div>
