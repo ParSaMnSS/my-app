@@ -9,16 +9,22 @@ import Headers from "./components/headers";
 import FAQ from "./components/FAQ";
 import ContactForm from "./components/informationForm";
 import Footer from "./components/footer";
+import PhoneNav from "./components/phonenav";
 
 export default function Home() {
   return (
     <div className={`${vazirmatn.className} antialiased`}>
       <div className="bg-[#F5F5F5]">
-        <header className="md:block hidden">
-          <Nav />
+        <header>
+          <div className="md:block hidden">
+            <Nav  />
+          </div>
+          <div className="md:hidden block">
+            <PhoneNav/>
+          </div>
         </header>
 
-        <div className="md:grid md:grid-cols-2">
+        <div className="md:grid md:grid-cols-2 hidden">
           <div className="md:px-16 pt-10 flex justify-center items-center">
             <Image
               className="md:w-[40vw] md:h-auto w-[80vw]"
@@ -48,13 +54,40 @@ export default function Home() {
                دریافت نکرده اید تحصیل در ترکیه می تواند راهکار فوق العاده ی برای انتخاب باشد.شما به راحتی می توانید در ترکیه پزشکی
                .دندانپزشکی .رشته های علوم مهندسی .مد و فشن و... را بخوانید . 
             </div>
-            <div className="grid grid-cols-2 gap-8 px-10">
-              <button className="bg-[#3D377B] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-blue-900 md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-blue-900 " >دریافت مشاوره تلفنی</button>
-              <button className="bg-[#3D377B] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-blue-900 md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-blue-900 " >دریافت مشاوره واتساپ</button>
+            <div className="grid grid-cols-2 md:gap-8 gap-2 md:px-10">
+              <button className="bg-[#CA5443] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره تلفنی</button>
+              <button className="bg-[#CA5443] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره واتساپ</button>
             </div>
           </div>
         </div>
-        <div className="bg-white">
+        <div className="flex flex-col">
+          <div className="md:px-16 flex justify-center items-center">
+          </div>
+          <div className="grid grid-rows-3 text-center items-center md:mt-20 md:pr-20 px-5">
+              <h1 className="text-[48px]  text font-[700] mx-auto">
+                راهنمای جامع
+                تحصیل در ترکیه
+              </h1>
+            <Image
+              className="w-[80vw]"
+              src="/model2.png"
+              alt="model 2"
+              width={500}
+              height={500}
+              />
+            <div className="md:text-[18px] md:text-right text-center">
+              با تحصیل در ترکیه می توانید راهی آسان و کم هزینه را برای آینده ی تحصیلی و کاری خود در کشورهای اروپایی و آمریکا و کانادا
+               رقم بزنید . دیگر لازم نیست نگران رتبه ی کنکور خود باشید .اگر علی رغم تلاش های بسیارتان نتیجه ی دلخواه را از کنکور
+               دریافت نکرده اید تحصیل در ترکیه می تواند راهکار فوق العاده ی برای انتخاب باشد.شما به راحتی می توانید در ترکیه پزشکی
+               .دندانپزشکی .رشته های علوم مهندسی .مد و فشن و... را بخوانید . 
+            </div>
+            <div className="grid grid-cols-2 md:gap-8 gap-2 md:px-10">
+              <button className="bg-[#CA5443] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره تلفنی</button>
+              <button className="bg-[#CA5443] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره واتساپ</button>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white mt-20">
           <div className="flex justify-center items-center md:pt-20 pt-10">
             <Image
                 className="md:w-[60vw] md:h-auto w-[90vw]"
@@ -67,6 +100,7 @@ export default function Home() {
           <Headers
             title="مشاوران شما در سوپرپی"
           />
+          
 
 
 
@@ -193,14 +227,14 @@ export default function Home() {
                 width={1200}
                 height={400}
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="md:absolute md:inset-0 md:flex hidden flex-col items-center justify-center">
                 <h1 className="font-bold text-white text-[36px] ">شرایط تحصیل در ترکیه</h1>
                 <h2 className="font-bold text-white text-[24px] " >:در کشور ترکیه می توانید در چهار مقطع تحصیل کنید</h2>
               </div>
             </div>
 
-
           </div>
+
           <div className="grid grid-cols-4 px-14" >
             <Bulletsm
               title="کاردانی"

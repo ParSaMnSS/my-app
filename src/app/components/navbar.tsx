@@ -1,25 +1,31 @@
+'use client'
+import { MenuIcon, XIcon } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+
 export default function Nav(){
+    const [isOpen, setIsOpen] = useState(false)
     return(
         <nav className="sticky top-0 bg-white shadow-md">
-            <div className="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-10">
+            <div className="max-w-screen-xl flex items-center justify-between mx-auto md:py-10 md:px-0 py-5 px-4 ">
                 <div>                
-                    <button className="bg-[#CA5443] md:px-5 md:py-3 text-white flex items-center md:gap-3 rounded-full">
-                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button className="bg-[#CA5443] md:px-5 md:py-3 px-3 py-2 text-white flex items-center md:gap-3 gap-1 rounded-full ml-auto">
+                        <svg className="md:w-[24px] w-[18px] " viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2181 0.5C5.7108 0.5 0.435743 5.73411 0.435743 12.1912C0.435743 14.3998 1.05349 16.4654 2.12637 18.2276L0 24.5L6.52319 22.4275C8.21108 23.3538 10.1523 23.8817 12.2181 23.8817C18.7249 23.8817 24 18.6478 24 12.1912C24 5.73411 18.7249 0.5 12.2181 0.5ZM12.2181 22.0199C10.2059 22.0199 8.33242 21.421 6.76819 20.3943L2.96152 21.604L4.1987 17.9537C3.01292 16.3333 2.31227 14.3422 2.31227 12.1909C2.31227 6.77111 6.75597 2.36183 12.2181 2.36183C17.6799 2.36183 22.1237 6.77111 22.1237 12.1909C22.1237 17.6106 17.6799 22.0199 12.2181 22.0199Z" fill="white"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.4542 7.3553C9.26335 6.89888 9.11715 6.88341 8.82234 6.86951C8.72122 6.86471 8.61158 6.86011 8.49161 6.86011C8.11179 6.86011 7.71797 6.9711 7.48067 7.21201C7.19186 7.50517 6.46973 8.19184 6.46973 9.60175C6.46973 11.0119 7.50468 12.3744 7.64888 12.5657C7.79349 12.7567 9.66739 15.6927 12.5829 16.8914C14.8585 17.8267 15.5342 17.7434 16.0533 17.6307C16.8088 17.467 17.7573 16.915 17.998 16.2461C18.2387 15.5768 18.2387 15.0031 18.1665 14.8839C18.0943 14.7643 17.9017 14.6929 17.6129 14.5492C17.3241 14.4059 15.904 13.7126 15.6393 13.6172C15.3745 13.5217 15.1297 13.5508 14.9261 13.8303C14.6451 14.2163 14.3748 14.6129 14.151 14.8481C13.9753 15.0327 13.6926 15.0584 13.4495 14.9558C13.1298 14.8207 12.23 14.5096 11.1267 13.5335C10.2683 12.7741 9.68856 11.836 9.52003 11.549C9.35151 11.2624 9.50518 11.0913 9.63505 10.9354C9.78314 10.7574 9.91975 10.6295 10.0642 10.4624C10.2086 10.295 10.2892 10.2058 10.3855 10.0144C10.4818 9.82332 10.417 9.6261 10.3448 9.4826C10.2723 9.339 9.69414 7.9293 9.4542 7.3553Z" fill="white"/>
                         </svg>
-                        <div className="text-center text-white text-base font-['Yekan Bakh FaNum']">مشاوره واتساپ</div>
+                        <div className="text-center text-white md:text-base md:text-[12px] text-[10px] font-['Yekan Bakh FaNum']">مشاوره واتساپ</div>
                     </button>
                 </div>
                 <div className="flex items-center space-x-28">
-                    <div className="flex space-x-10">
-                        <a href="#">تماس با ما</a>
-                        <a href="#">درباره ما</a>
-                        <a href="#">لیست دانشگاه‌ها</a>
-                        <a href="#">بلاگ سوپر پی </a>
+                    <div className={`${isOpen ? "flex" : "hidden"} md:flex space-x-10 `}>
+                        <Link href="#">تماس با ما</Link>
+                        <Link href="#">درباره ما</Link>
+                        <Link href="#">لیست دانشگاه‌ها</Link>
+                        <Link href="#">بلاگ سوپر پی </Link>
                     </div>
-                    <a href="#">
-                        <svg width="147" height="41" viewBox="0 0 147 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <Link href="#">
+                        <svg className="md:w-[147px] w-[100px] md:px-0 px-4 " viewBox="0 0 147 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_976_1274)">
                             <path d="M60.0016 14.1865H63.4021V16.9387H65.9866V19.7725H63.4021V24.8028C63.4021 25.3278 63.5338 25.6922 63.7948 25.8961C64.0558 26.0999 64.4562 26.2019 64.9933 26.2019C65.2062 26.2019 65.4114 26.1968 65.6065 26.184C65.8017 26.1738 65.9511 26.1637 66.0525 26.156V28.6992C65.9207 28.7222 65.6724 28.7502 65.3075 28.7884C64.9427 28.8267 64.555 28.8445 64.142 28.8445C63.1411 28.8445 62.3302 28.7324 61.7069 28.5056C61.0861 28.2788 60.6326 27.9144 60.3488 27.4123C60.065 26.9078 59.9231 26.2452 59.9231 25.4246V19.7725H58.124V16.9387H60.0016V14.1865Z" fill="#272323"/>
                             <path d="M77.729 28.666H74.3159V26.6783H74.1385C74.0346 26.9892 73.8446 27.3103 73.5633 27.6441C73.2846 27.9779 72.907 28.2608 72.4383 28.4927C71.967 28.7246 71.3867 28.8418 70.6949 28.8418C69.9145 28.8418 69.2329 28.6966 68.6476 28.4035C68.0623 28.1104 67.6087 27.6594 67.2844 27.0478C66.96 26.4362 66.7979 25.659 66.7979 24.711V16.936H70.3199V23.8012C70.3199 24.372 70.4111 24.8104 70.5961 25.1162C70.7811 25.4245 71.0142 25.6335 71.298 25.7481C71.5818 25.8628 71.8707 25.9214 72.1646 25.9214C72.532 25.9214 72.8715 25.8348 73.1807 25.6615C73.4898 25.4882 73.7407 25.2334 73.9307 24.8995C74.1207 24.5657 74.217 24.1656 74.217 23.6993V16.936H77.729V28.6634V28.666Z" fill="#272323"/>
@@ -39,7 +45,13 @@ export default function Nav(){
                             </clipPath>
                             </defs>
                         </svg>
-                    </a>
+                    </Link>
+                </div>
+                <div className="md:hidden flex items-center" >
+                    <button onClick={()=>{setIsOpen(!isOpen)}}>
+                        {isOpen ? <XIcon/> : <MenuIcon/>}
+                    </button>
+
                 </div>
             </div>
         </nav>
