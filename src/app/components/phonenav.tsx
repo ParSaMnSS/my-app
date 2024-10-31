@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function PhoneNav(){
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className="sticky top-0 bg-white shadow-md">
+        <nav className="sticky top-0 bg-white shadow-md z-50">
             <div className="max-w-screen-md flex items-center mx-auto py-5 px-4" >
                 <Link href='#'>
                     <svg className="md:w-[147px] w-[100px] md:px-0 px-4 " viewBox="0 0 147 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,19 +37,19 @@ export default function PhoneNav(){
                     </svg>
                     <h1 className="text-right text-[10px] font-['Yekan Bakh FaNum'] " >مشاوره واتساپ</h1>
                 </button>
-                <div className="flex items-center" >
-                    <div className={`absolute top-0 left-0 w-full transition-transform duration-300 bg-white min-h-screen pt-20 gap-5  ${isOpen ? 'flex' : 'hidden'}  ${isOpen ? 'translate-y-14' : 'transform -translate-y-full'} space-y-10 flex-col `}>
-                        <Link href="#" className="font-semibold text-default flex justify-center" >بلاگ سوپر پی </Link>
-                        <Link href="#" className="font-semibold text-default flex justify-center" >لیست دانشگاه‌ها</Link>
-                        <Link href="#" className="font-semibold text-default flex justify-center" >درباره ما</Link>
-                        <Link href="#" className="font-semibold text-default flex justify-center" >تماس با ما</Link>
-                        
-                        <div className="grid grid-rows-2 mx-auto gap-2">
-                            <button className=" w-[90vw] bg-[#CA5443] font-bold text-default text-white py-3 rounded-xl " >دریافت مشاوره تلفنی</button>
-                            <button className=" w-[90vw] bg-[#CA5443] font-bold text-default text-white py-3 rounded-xl " >دریافت مشاوره واتساپ</button>
-                        </div>                        
+                <div className="flex items-center  " >
+                <div className={`absolute top-0 left-0 w-full bg-white min-h-screen pt-20 gap-5 ${isOpen ? 'flex opacity-100 visible' : 'flex opacity-0 invisible'} ${isOpen ? 'translate-y-14' : 'transform -translate-y-full'} space-y-10 flex-col transition-all duration-500 z-40`}>
+                    <Link href="#" className="font-semibold text-default flex justify-center" >بلاگ سوپر پی </Link>
+                    <Link href="#" className="font-semibold text-default flex justify-center" >لیست دانشگاه‌ها</Link>
+                    <Link href="#" className="font-semibold text-default flex justify-center" >درباره ما</Link>
+                    <Link href="#" className="font-semibold text-default flex justify-center" >تماس با ما</Link>
+                    
+                    <div className="grid grid-rows-2 mx-auto gap-2">
+                        <button className=" w-[90vw] bg-[#CA5443] font-bold text-default text-white py-3 rounded-xl " >دریافت مشاوره تلفنی</button>
+                        <button className=" w-[90vw] bg-[#CA5443] font-bold text-default text-white py-3 rounded-xl " >دریافت مشاوره واتساپ</button>
+                    </div>                        
 
-                    </div>
+                </div>
 
                 </div>
                 <div className="flex items-center mx-2" >

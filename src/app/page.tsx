@@ -10,6 +10,8 @@ import FAQ from "./components/FAQ";
 import ContactForm from "./components/informationForm";
 import Footer from "./components/footer";
 import PhoneNav from "./components/phonenav";
+import InfoPicBox from "./components/infopickbox";
+import UniList from "./components/uniList";
 
 export default function Home() {
   return (
@@ -36,9 +38,8 @@ export default function Home() {
           </div>
           <div className="grid grid-rows-3 text-center items-center md:mt-20 md:pr-20 px-5">
             <div className="md:block hidden">
-              <h1 className="md:text-[50px]  text font-[700] text-right">
+              <h1 className="md:text-[50px]  text font-[700] text-right ">
               راهنمای جامع
-              <br/>
               تحصیل در ترکیه
               </h1>
             </div>
@@ -60,19 +61,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col">
-          <div className="md:px-16 flex justify-center items-center">
+        <div className="flex flex-col md:hidden">
+          <div className="flex justify-center items-center">
           </div>
-          <div className="grid grid-rows-3 text-center items-center md:mt-20 md:pr-20 px-5">
+          <div className="grid grid-rows-3 text-center items-center px-3">
               <h1 className="text-[48px]  text font-[700] mx-auto">
                 راهنمای جامع
                 تحصیل در ترکیه
               </h1>
             <Image
-              className="w-[80vw]"
+              className="w-[80vw] ml-[8vw] "
               src="/model2.png"
               alt="model 2"
-              width={500}
+              width={200}
               height={500}
               />
             <div className="md:text-[18px] md:text-right text-center">
@@ -81,9 +82,9 @@ export default function Home() {
                دریافت نکرده اید تحصیل در ترکیه می تواند راهکار فوق العاده ی برای انتخاب باشد.شما به راحتی می توانید در ترکیه پزشکی
                .دندانپزشکی .رشته های علوم مهندسی .مد و فشن و... را بخوانید . 
             </div>
-            <div className="grid grid-cols-2 md:gap-8 gap-2 md:px-10">
-              <button className="bg-[#CA5443] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره تلفنی</button>
-              <button className="bg-[#CA5443] text-white font-[700] text-[16px]   md:p-2 px-2 py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره واتساپ</button>
+            <div className="grid grid-cols-2 gap-2">
+              <button className="bg-[#CA5443] text-white font-[500] text-[16px] px-[8px] py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره تلفنی</button>
+              <button className="bg-[#CA5443] text-white font-[500] text-[16px] px-[8px] py-3 rounded-xl md:hover:bg-[#e0604c] md:hover:duration-300 md:focus:ring md:focus:ring-offset-2 md:focus:ring-[#e0604c] " >دریافت مشاوره واتساپ</button>
             </div>
           </div>
         </div>
@@ -98,13 +99,13 @@ export default function Home() {
                 />
           </div>
           <Headers
+            clas=""
             title="مشاوران شما در سوپرپی"
-          />
-          
+          />       
 
 
-
-          <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
+          {/* needs carousel... */}
+          <div className="md:grid md:grid-cols-3  px-14 gap-[20px] mt-28">
             <div className="bg-transparent border-2 border-[#cfebfc] h-[413px] w-auto rounded-xl mt-24 " >
               <div className="flex justify-center items-center -mt-20  ">
                 <Image
@@ -168,13 +169,45 @@ export default function Home() {
           </div>
 
 
+          <div className="md:hidden mt-10">
+            <Image
+              className="w-[90vw] h-auto mx-auto py-10"
+              src='/VoiceLine.png'
+              alt="kk"
+              width={900}
+              height={300}
+            
+            />
+          </div>
+
+
         </div>
-        <div className="mt-10 bg-[#F5F5F5]" >
+        <div className="pt-8 bg-[#F5F5F5]" >
           <Headers
+            clas=""
             title="مزایای تحصیل در ترکیه"
           />
-          <div className="grid grid-cols-4 gap-[150px] px-56 py-10">
+          <div className="grid md:grid-cols-4 grid-cols-2 md:gap-[150px] md:px-56 md:py-10 mx-12 pb-16">
+          <Homecards
+              cls=""
+              src='/g135.svg'
+              title='اراسموس پلاس'
+              key='key'
+              />
             <Homecards
+              cls=""
+              src='/g135.svg'
+              title='اراسموس پلاس'
+              key='key'
+              />
+            <Homecards
+              cls="mt-5"
+              src='/g135.svg'
+              title='اراسموس پلاس'
+              key='key'
+              />
+            <Homecards
+              cls="mt-5"
               src='/g135.svg'
               title='اراسموس پلاس'
               key='key'
@@ -184,12 +217,13 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="bg-white" >
+        <div className="bg-white pt-10" >
           <Headers
+            clas=""
             title="دانشگاه های ترکیه"
           />
-          <div className="grid grid-cols-2 px-[77px] gap-1 ">
-            <div className="overflow-hidden  ">
+          <div className="md:grid md:grid-cols-2 md:px-[77px] md:gap-1 px-5 md:mb-0 -mb-[60vh] ">
+            <div className="overflow-hidden md:block hidden  ">
               <Image
                 className="w-[50vw]  "
                 src='/tr-uni1.svg'
@@ -198,7 +232,7 @@ export default function Home() {
                 height={300}            
               />
             </div>
-            <div className="grid grid-rows-2 text-right" >
+            <div className="grid grid-rows-2 text-right -mt-5" >
               <div className="flex flex-col items-end mt-10">
                 <Bullet
                   title="دانشگاه های دولتی"
@@ -212,30 +246,17 @@ export default function Home() {
               </div>
             </div>
             {/* this is the thingi */}
-            <div className="w-[90vw] h-[429px] relative"> 
-              <Image
-                className="w-[90vw] h-auto absolute"
-                src='/sharayet.svg'
-                alt="ik"
-                width={1200}
-                height={400}
-              />
-              <Image
-                className="absolute w-[90vw] h-auto"
-                src='/sharayet2.svg'
-                alt="idk"
-                width={1200}
-                height={400}
-              />
-            <div className="md:absolute md:inset-0 md:flex hidden flex-col items-center justify-center">
-                <h1 className="font-bold text-white text-[36px] ">شرایط تحصیل در ترکیه</h1>
-                <h2 className="font-bold text-white text-[24px] " >:در کشور ترکیه می توانید در چهار مقطع تحصیل کنید</h2>
-              </div>
-            </div>
+            <InfoPicBox
+              cls="md:block hidden"
+            />
 
           </div>
 
-          <div className="grid grid-cols-4 px-14" >
+          <UniList
+            clas="md:hidden block"
+          />
+
+          <div className="md:grid md:grid-cols-4 md:px-14 px-5" >
             <Bulletsm
               title="کاردانی"
               text="•این مقطع دو ساله است و سریع وارد بازار کار میشوید •شهریه مقطع کاردانی مناسب تر از دیگر مقاطع هست. •در اکثر دانشگاه ترکیه شما امکان تحصیل در مقطع کاردانی رو دارید. •اکنون یکی از مناسب ترین های دریافت اقامت ترکیه تحصیل در مقطع کاردانی هست."
@@ -254,30 +275,17 @@ export default function Home() {
             />
           </div>
           <Headers
+            clas=""
             title="لیست دانشگاه ها"
           />
 
-          <div className="grid grid-cols-3 px-14 gap-[20px] mt-28">
-            <Cards
-              src="/uni-img.png"
-              alt="unimage"
-              title="دانشگاه مدیپول"
-              text="دانشگاه مدیپول استانبول قطعا شناخته شده ترین دانشگاه خصوصی در ترکیه برای تحصیل پزشکی در این کشور است.دلیل شهرت این دانشگاه وجود امکانات مدرن و متدهای آموزشی ویژه ای است که در دانشکده پزشکی این دانشگاه ارائه می شود. "            
-            />
-            <Cards
-              src="/uni-img.png"
-              alt="unimage"
-              title="دانشگاه آجی بادام"
-              text="دانشگاه آجی بادام ترکیه یکی از دانشگاه‌های خصوصی در کشور ترکیه محسوب می‌شود که در منطقه آسیایی  استانبول قرار دارد. در دانشگاه آجی بادام استانبول، دروس به زبان انگلیسی و ترکی تدریس می‌شود که این مورد تحصیل را برای دانشجویان خارجی آسان می‌سازد."
-            />
-            <Cards
-              src="/uni-img.png"
-              alt="unimage"
-              title="دانشگاه آیدین"
-              text="دانشگاه آیدین، دانشگاهی خصوصی در شهر استانبول ترکیه است که در سال ۲۰۰۷ تأسیس شد. این دانشگاه یکی از بزرگترین دانشگاه‌های خصوصی ترکیه است و بیش از ۴۰ هزار دانشجو دارد و یکی از بهترین انتخاب‌ها برای تحصیل در ترکیه است"
-            />
-          </div>
+          <UniList
+            clas="md:block hidden"
+          />
+
+
           <Headers
+            clas=""
             title="بلاگ سوپر پی "
           />
           <div className="grid grid-cols-2 mx-10 ">
@@ -337,6 +345,7 @@ export default function Home() {
           </div>
 
           <Headers
+            clas=""
             title="سوالات متداول"
           />
 
