@@ -12,7 +12,7 @@ const Bullet: React.FC<BulletProps> = ({ title, text }) => {
         <div className="flex items-center space-x-2">
             <h1 className="text-lg font-bold text-[24px]">{title}</h1>
             <Image
-                className="h-[6vh] w-auto"
+                className="md:h-[6vh] h-[4vh] w-auto"
                 src='/triangle.svg'
                 alt="tri"
                 width={100}

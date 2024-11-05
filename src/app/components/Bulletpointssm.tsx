@@ -19,7 +19,7 @@ const Bulletsm: React.FC<BulletsmProps> = ({ title, text }) => {
                 height={100}
             />
         </div>
-        <p className="font-[400] text-default text-right text-[#4D4D4D] mt-5 px-8">{text}</p>
+        <p className="font-[400] text-default text-right text-[#4D4D4D] mt-5 px-8 md:-mr-[2.5vw]">{text}</p>
     </div>    
   );
 };

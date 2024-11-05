@@ -188,7 +188,7 @@ export default function Home() {
             title="مزایای تحصیل در ترکیه"
           />
           <div className="grid md:grid-cols-4 grid-cols-2 md:gap-[150px] md:px-56 md:py-10 mx-12 pb-16">
-          <Homecards
+            <Homecards
               cls=""
               src='/g135.svg'
               title='اراسموس پلاس'
@@ -222,7 +222,7 @@ export default function Home() {
             clas=""
             title="دانشگاه های ترکیه"
           />
-          <div className="md:grid md:grid-cols-2 md:px-[77px] md:gap-1 px-5 md:mb-0 -mb-[60vh] ">
+          <div className="md:grid md:grid-cols-2 md:px-[77px] md:gap-1 px-5 md:mb-0 -mb-[50vh] ">
             <div className="overflow-hidden md:block hidden  ">
               <Image
                 className="w-[50vw]  "
@@ -245,16 +245,19 @@ export default function Home() {
                 />
               </div>
             </div>
-            {/* this is the thingi */}
-            <InfoPicBox
-              cls="md:block hidden"
+          </div>
+          <Headers
+              clas="md:hidden block"
+              title="لیست دانشگاه ها"
             />
 
-          </div>
+          <InfoPicBox cls={"-mt-[100px] md:block hidden"}            />
 
           <UniList
             clas="md:hidden block"
           />
+
+          <InfoPicBox cls={"md:hidden block"}/>          
 
           <div className="md:grid md:grid-cols-4 md:px-14 px-5" >
             <Bulletsm
@@ -288,7 +291,9 @@ export default function Home() {
             clas=""
             title="بلاگ سوپر پی "
           />
-          <div className="grid grid-cols-2 mx-10 ">
+
+          {/* somethingsomeonesomewhere  */}
+          <div className="md:grid md:grid-cols-2 mx-10 ">
             <div className="relative inline-block w-[56vw] h-[649px] overflow-hidden rounded-2xl ">
               <Image
                 className="w-full float-left object-cover h-[700px] "
